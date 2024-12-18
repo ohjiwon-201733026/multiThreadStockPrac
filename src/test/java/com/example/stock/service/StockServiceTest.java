@@ -31,7 +31,6 @@ class StockServiceTest {
     @Test
     public void 재고감소() {
         stockService.decrease(1L, 1L);
-
         Stock stock = stockRepository.findById(1L).orElseThrow();
 
         assertEquals(99, stock.getQuantity());
